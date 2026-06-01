@@ -1,68 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
-        <title>Serhii Portafolio Page</title>
-    </head>
-    <body>
-        <div class="overlay first"></div>
-        <div class="overlay second"></div>
-        <div class="overlay third"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+    <title>Serhii Turtsanash | Desarrollador Junior Full-Stack</title>
+</head>
+<body>
 
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="https://serhiiturtsanash.github.io/PortafolioSerhii/" class="nav__logo">Serhii's Portfolio</a>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">Serhii Turtsanash</a>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="#home" class="nav__link">Inicio</a></li>
+                <li><a href="#about" class="nav__link">Sobre mí</a></li>
+                <li><a href="#stack" class="nav__link">Stack</a></li>
+                <li><a href="#projects" class="nav__link">Proyectos</a></li>
+                <li><a href="#contact" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero container" id="home">
+            <div class="hero__text">
+                <p class="hero__kicker">Hola, soy</p>
+                <h1 class="hero__title">Serhii Turtsanash</h1>
+                <p class="hero__sub">Desarrollador Junior Full-Stack · React · React Native (Expo) · Spring Boot</p>
+
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">Ver proyectos</a>
+                    <a href="./assets/cv/Serhii_ESPAÑOL.pdf" class="btn btn--ghost">Descargar CV</a>
                 </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="https://serhiiturtsanash.github.io/PortafolioSerhii/" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="https://github.com/SerhiiTurtsanash" class="nav__link">My projects</a></li>
-                        
-                    </ul>
+                <div class="hero__langs">
+                    <a href="./assets/cv/Serhii_ESPAÑOL.pdf">ES</a>
+                    <a href="./assets/cv/Serhii_CATALA.pdf">CA</a>
+                    <a href="./assets/cv/Serhii_ANGLES.pdf">EN</a>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <ion-icon name="menu"></ion-icon>
+                <div class="hero__social">
+                    <a href="https://www.linkedin.com/in/serhii-turtsanash-460744314/" target="_blank" rel="noopener" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="https://wa.me/+34631154810" target="_blank" rel="noopener" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                    <a href="https://github.com/SerhiiTurtsanash" target="_blank" rel="noopener" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
                 </div>
-            </nav>
-        </header>
+            </div>
 
-        <main class="l-main bd-grid">
-            <div class="home">
-                <div class="home__information">
-                    <span class="home__pressent anime-text">Hello, my name is</span>
-                    <h1 class="home__title anime-text">Serhii Turtsanash</h1>
-                    <span class="home__skill anime-text">I am a junior programmer</span>
-                    
-                    <div>
-                        <a href="./assets/cv/Serhii_ANGLES.pdf" class="home__button anime-text">Download CV in English</a>
-                        <a href="./assets/cv/Serhii_ESPAÑOL.pdf" class="home__button anime-text">Spanish</a>
-                        <a href="./assets/cv/Serhii_CATALA.pdf" class="home__button anime-text">Catalan</a>
+            <div class="hero__img">
+                <img src="assets/img/img.jpg" alt="Serhii Turtsanash">
+            </div>
+        </section>
+
+        <section class="section container" id="about">
+            <h2 class="section__title">Sobre mí</h2>
+            <p class="section__kicker">Quién soy y a qué me dedico</p>
+
+            <div class="about">
+                <div class="card about__text">
+                    <p>
+                        Soy desarrollador junior full-stack con base en Barcelona. Acabo de terminar el
+                        ciclo de <strong>DAM</strong> (Desarrollo de Aplicaciones Multiplataforma) en el
+                        Institut Poblenou. Mi última experiencia profesional fue como
+                        <strong>QA Automation Engineer</strong> en TVUP Streaming Media (prácticas
+                        dual), donde mantuve frameworks de testing con Selenium y resolví bugs
+                        analizando logs reales.
+                    </p>
+                    <p>
+                        Además soy <strong>co-fundador de Nexonworks</strong>, una plataforma SaaS omnicanal
+                        que centraliza la atención al cliente en una única bandeja de entrada.
+                    </p>
+                    <p>
+                        Busco mi primera posición como dev donde pueda aportar lo que ya sé (React,
+                        React Native, Spring Boot, Python) y seguir aprendiendo en un equipo serio.
+                    </p>
+                </div>
+
+                <ul class="facts">
+                    <li><strong>Ubicación:</strong> Barcelona, España</li>
+                    <li><strong>Formación:</strong> Titulado en DAM · Institut Poblenou</li>
+                    <li class="facts__group">
+                        <strong>Experiencia:</strong>
+                        <span>QA Automation · TVUP</span>
+                        <span>Desarrollador Full-Stack · Nexonworks</span>
+                        <span>Técnico de Mantenimiento · Grupotodoplano</span>
+                    </li>
+                    <li><strong>Idiomas:</strong> ES · CA · UA · RU · EN</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section container" id="stack">
+            <h2 class="section__title">Stack técnico</h2>
+            <p class="section__kicker">Tecnologías con las que trabajo</p>
+
+            <div class="stack">
+                <div class="card">
+                    <h3 class="card__title">Frontend</h3>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>React Native</span>
+                        <span>Expo</span>
+                        <span>Vite</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS / SCSS</span>
                     </div>
                 </div>
 
-                <div class="home__img">
-                    <img src="assets/img/img.jpg" alt="">
-                </div>
-                
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/serhii-turtsanash-460744314/"><ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon></a>
-                    <a href="https://wa.me/+34631154810"><ion-icon name="logo-whatsapp" class="home__social-icon"></ion-icon></a>
-                    <a href="https://github.com/SerhiiTurtsanash"><ion-icon name="logo-github" class="home__social-icon"></ion-icon></a>
+                <div class="card">
+                    <h3 class="card__title">Backend</h3>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Django</span>
+                        <span>SQL</span>
+                    </div>
                 </div>
 
+                <div class="card">
+                    <h3 class="card__title">Testing y herramientas</h3>
+                    <div class="tags">
+                        <span>Selenium</span>
+                        <span>JUnit</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Linux</span>
+                    </div>
+                </div>
             </div>
-        </main>
+        </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+        <section class="section container" id="projects">
+            <h2 class="section__title">Proyectos</h2>
+            <p class="section__kicker">Cosas reales que he construido</p>
 
-        <script src="assets/js/main.js"></script>
-    
-        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    </body>
+            <article class="card project project--featured">
+                <span class="project__badge">Destacado</span>
+                <h3 class="project__title">Nexonworks</h3>
+                <p class="project__role">Co-fundador · Desarrollador full-stack</p>
+                <p class="project__desc">
+                    Plataforma SaaS omnicanal que centraliza la atención al cliente en una única
+                    bandeja de entrada. Unifica WhatsApp, email, Idealista, Fotocasa, chat web y
+                    formularios. Incluye un asistente de IA propio (<strong>Capitán</strong>),
+                    entrenado con la base de datos del negocio, e integración con CRM para
+                    automatizar correos y flujos de trabajo.
+                </p>
+                <a class="link" href="https://nexonworks.es" target="_blank" rel="noopener">Visitar la web →</a>
+            </article>
+
+            <div class="projects-grid">
+                <article class="card project">
+                    <h3 class="project__title">CRUD FastAPI + SQLModel</h3>
+                    <p class="project__desc">
+                        API REST en Python con operaciones CRUD y persistencia en base de datos
+                        relacional usando SQLModel.
+                    </p>
+                    <div class="tags">
+                        <span>Python</span><span>FastAPI</span><span>SQLModel</span>
+                    </div>
+                    <a class="link" href="https://github.com/SerhiiTurtsanash/CRUD-FastAPI-SQLModel" target="_blank" rel="noopener">GitHub →</a>
+                </article>
+
+                <article class="card project">
+                    <h3 class="project__title">Java Game con SOLID</h3>
+                    <p class="project__desc">
+                        Juego de terminal en Java aplicando principios SOLID y POO avanzada
+                        (herencia, abstracción, interfaces).
+                    </p>
+                    <div class="tags">
+                        <span>Java</span><span>SOLID</span><span>POO</span>
+                    </div>
+                    <a class="link" href="https://github.com/SerhiiTurtsanash/Java_Game_With_Solid" target="_blank" rel="noopener">GitHub →</a>
+                </article>
+
+                <article class="card project">
+                    <h3 class="project__title">Gestión de archivos en Java</h3>
+                    <p class="project__desc">
+                        Sistema de gestión y manipulación de archivos en Java orientado a
+                        procesamiento por lotes.
+                    </p>
+                    <div class="tags">
+                        <span>Java</span><span>I/O</span>
+                    </div>
+                    <a class="link" href="https://github.com/SerhiiTurtsanash/JavaFileManagement" target="_blank" rel="noopener">GitHub →</a>
+                </article>
+
+                <article class="card project">
+                    <h3 class="project__title">Este portafolio</h3>
+                    <p class="project__desc">
+                        Web personal multilingüe con CV descargable en tres idiomas. HTML + SCSS.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span><span>SCSS</span><span>JavaScript</span>
+                    </div>
+                    <a class="link" href="https://github.com/SerhiiTurtsanash/PortafolioSerhii" target="_blank" rel="noopener">GitHub →</a>
+                </article>
+            </div>
+
+            <p class="projects-more">
+                Más proyectos en <a class="link" href="https://github.com/SerhiiTurtsanash" target="_blank" rel="noopener">github.com/SerhiiTurtsanash</a>
+            </p>
+        </section>
+
+        <section class="section container" id="contact">
+            <h2 class="section__title">Contacto</h2>
+            <p class="section__kicker">¿Hablamos?</p>
+
+            <div class="contact">
+                <a class="contact__item" href="mailto:serhiiturtsanash@gmail.com">
+                    <ion-icon name="mail"></ion-icon>
+                    <span>serhiiturtsanash@gmail.com</span>
+                </a>
+                <a class="contact__item" href="https://wa.me/+34631154810" target="_blank" rel="noopener">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <span>+34 631 154 810</span>
+                </a>
+                <a class="contact__item" href="https://www.linkedin.com/in/serhii-turtsanash-460744314/" target="_blank" rel="noopener">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <span>linkedin.com/in/serhii-turtsanash</span>
+                </a>
+                <a class="contact__item" href="https://github.com/SerhiiTurtsanash" target="_blank" rel="noopener">
+                    <ion-icon name="logo-github"></ion-icon>
+                    <span>github.com/SerhiiTurtsanash</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> Serhii Turtsanash</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+</body>
 </html>

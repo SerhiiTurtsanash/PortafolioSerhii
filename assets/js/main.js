@@ -1,27 +1,49 @@
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+// Mobile menu toggle
+const toggle = document.getElementById('nav-toggle')
+const menu = document.getElementById('nav-menu')
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
+if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('show')
+        toggle.setAttribute('aria-expanded', open)
+    })
 }
 
-showMenu('nav-toggle','nav-menu')
+// Close menu when clicking a link
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (menu) menu.classList.remove('show')
+        if (toggle) toggle.setAttribute('aria-expanded', 'false')
+    })
+})
 
+// Close menu when clicking outside
+document.addEventListener('click', e => {
+    if (!menu || !toggle) return
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('show')
+        toggle.setAttribute('aria-expanded', 'false')
+    }
+})
 
-gsap.to(".first", 1.5, {delay: .5, top: "-100%", ease: Expo.easeInOut});
-gsap.to(".second", 1.5, {delay: .7, top: "-100%", ease: Expo.easeInOut});
-gsap.to(".third", 1.5, {delay: .9, top: "-100%", ease: Expo.easeInOut});
+// Footer year
+const yearEl = document.getElementById('year')
+if (yearEl) yearEl.textContent = new Date().getFullYear()
 
-gsap.from('.home__img', {opacity: 0, duration: 2, delay: 2, x: 60})
+// Reveal on scroll (IntersectionObserver - no library needed)
+const reveals = document.querySelectorAll('.reveal')
 
-gsap.from('.home__information', {opacity: 0, duration: 3, delay: 2.3, y: 25})
-gsap.from('.anime-text', {opacity: 0, duration: 3, delay: 2.3, y: 25, ease:'expo.out', stagger: .3})
+if (reveals.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible')
+                io.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' })
 
-gsap.from('.nav__logo', {opacity:0, duration: 3, delay: 3.2, y: 25, ease:'expo.out'});
-gsap.from('.nav__item', {opacity: 0, duration: 3, delay: 3.2, y: 25, ease:'expo.out', stagger: .2})
-
-gsap.from('.home__social-icon', {opacity: 0, duration: 3, delay: 4, y: 25, ease:'expo.out', stagger: .2})
+    reveals.forEach(el => io.observe(el))
+} else {
+    reveals.forEach(el => el.classList.add('visible'))
+}
